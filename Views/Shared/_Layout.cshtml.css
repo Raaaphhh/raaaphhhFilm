@@ -1,0 +1,50 @@
+﻿a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
+  color: white;
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
+a {
+  color: #66bfff;
+}
+a:hover {
+  color: #a8d8ff;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+.btn-primary:hover {
+  background-color: #155a9a;
+  border-color: #124e85;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top,
+.border-bottom {
+  border-color: #333;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(255, 255, 255, 0.05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+  background-color: #1b6ec2;
+  color: white;
+  border: none;
+}
+
+/* Supprimé le footer conflictuel ici */

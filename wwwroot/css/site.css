@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 14px;
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: 'Bitcount Prop Single', sans-serif;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Titres */
+h1, h2, h3, .navbar-brand {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Focus */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #66bfff;
+}
+
+/* Liens */
+a {
+  color: #66bfff;
+}
+a:hover {
+  color: #a8d8ff;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  border-top: 1px solid #333;
+  text-align: center;
+  flex-shrink: 0;
+  line-height: 60px;
+  width: 100%;
+}
+
+

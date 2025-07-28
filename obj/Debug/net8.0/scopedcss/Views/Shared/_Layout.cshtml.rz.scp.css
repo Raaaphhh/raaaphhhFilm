@@ -1,0 +1,50 @@
+a.navbar-brand[b-271z52m1c4] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
+  color: white;
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
+a[b-271z52m1c4] {
+  color: #66bfff;
+}
+a:hover[b-271z52m1c4] {
+  color: #a8d8ff;
+}
+
+.btn-primary[b-271z52m1c4] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+.btn-primary:hover[b-271z52m1c4] {
+  background-color: #155a9a;
+  border-color: #124e85;
+}
+
+.nav-pills .nav-link.active[b-271z52m1c4],
+.nav-pills .show > .nav-link[b-271z52m1c4] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-271z52m1c4],
+.border-bottom[b-271z52m1c4] {
+  border-color: #333;
+}
+
+.box-shadow[b-271z52m1c4] {
+  box-shadow: 0 .25rem .75rem rgba(255, 255, 255, 0.05);
+}
+
+button.accept-policy[b-271z52m1c4] {
+  font-size: 1rem;
+  line-height: inherit;
+  background-color: #1b6ec2;
+  color: white;
+  border: none;
+}
+
+/* Supprimé le footer conflictuel ici */
