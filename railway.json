@@ -1,4 +1,18 @@
 {
-  "build": "dotnet publish -c Release -o publish",
-  "start": "dotnet publish/raaaphhhFilm.dll"
+  "build": {
+    "builder": "nixpacks",
+    "nixpacksPlan": {
+      "phases": {
+        "install": {
+          "cmds": ["dotnet restore"]
+        },
+        "build": {
+          "cmds": ["dotnet publish -c Release -o out"]
+        },
+        "start": {
+          "cmds": ["dotnet out/raaaphhhFilm.dll"]
+        }
+      }
+    }
+  }
 }
