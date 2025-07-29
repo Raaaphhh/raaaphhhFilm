@@ -29,3 +29,4 @@
 /Users/raphaeldescamps/RiderProjects/raaaphhhFilm/raaaphhhFilm/obj/Debug/net8.0/raaaphhhFilm.genruntimeconfig.cache
 /Users/raphaeldescamps/RiderProjects/raaaphhhFilm/raaaphhhFilm/obj/Debug/net8.0/ref/raaaphhhFilm.dll
 /Users/raphaeldescamps/RiderProjects/raaaphhhFilm/raaaphhhFilm/obj/Debug/net8.0/raaaphhhFilm.sourcelink.json
+/Users/raphaeldescamps/RiderProjects/raaaphhhFilm/raaaphhhFilm/bin/Debug/net8.0/videos.json
