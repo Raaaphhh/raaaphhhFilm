@@ -7,6 +7,13 @@ namespace raaaphhhFilm.Controllers;
 
 public class ContactController : Controller
 {
+    private readonly IConfiguration _configuration;
+
+    public ContactController(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
     // GET
     public IActionResult Contact()
     {
@@ -20,9 +27,12 @@ public class ContactController : Controller
         {
             try
             {
+                var fromPassword = _configuration["EmailSettings:Password"]
+                    ?? throw new InvalidOperationException("EmailSettings:Password non configuré");
+                var receiver = _configuration["EmailSettings:Receiver"]
+                    ?? throw new InvalidOperationException("EmailSettings:Receiver non configuré");
                 var fromAddress = new MailAddress($"{emailUser}", "Destinataire");
-                var toAddress = new MailAddress("destinataire@example.com", "Destinataire");
-                const string fromPassword = "TON_MDP"; // à sécuriser dans un fichier de config
+                var toAddress = new MailAddress(receiver, "Destinataire");
                 string subject = $"Message de {model.Name}";
                 string body = $"Nom: {model.Name}\nEmail: {model.Email}\n\nMessage:\n{model.Message}";
 

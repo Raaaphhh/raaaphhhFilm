@@ -7,10 +7,12 @@ namespace raaaphhhFilm.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    
-    public HomeController(ILogger<HomeController> logger)
+    private readonly IConfiguration _configuration;
+
+    public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
     {
         _logger = logger;
+        _configuration = configuration;
     }
     
     private readonly Dictionary<string, (string Url, bool IsPrivate, string CodeSecret)> videos = new()
@@ -25,11 +27,12 @@ public class HomeController : Controller
         {"Dreux Vibes", ("https://www.youtube.com/embed/lf6F53YZFPo?si=gVvWGLXRUH0B9JL2", false, "")},
         {"Parissy", ("https://www.youtube.com/embed/756z90Dfp8I?si=SwnXYxv9-eXopU3H", false, "")},
         {"KOLD", ("https://www.youtube.com/embed/wV1lRdTTwWg?si=__iJ6ikY5uwtVp3f", false, "")},
-        {"Alone", ("https://www.youtube.com/embed/P8hpnjseRDQ?si=tgU0lC54Q9W4ngTh", true, "1605")},
-        {"NYW", ("https://www.youtube.com/embed/RzjV06Qanck?si=EsH_asXzvl7tutM3", true, "1605")},
+        {"Alone", ("https://www.youtube.com/embed/P8hpnjseRDQ?si=tgU0lC54Q9W4ngTh", true, "")},
+        {"NYW", ("https://www.youtube.com/embed/RzjV06Qanck?si=EsH_asXzvl7tutM3", true, "")},
     };
-    
-    private const string GlobalCode = "1605";
+
+    private string GlobalCode => _configuration["AccessCode"]
+        ?? throw new InvalidOperationException("AccessCode non configuré dans appsettings.json");
 
     [HttpGet]
     public IActionResult Index()

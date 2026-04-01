@@ -1,9 +1,12 @@
+import os
 import requests
 import json
 from pathlib import Path
 
 # CONFIGURATION
-API_KEY = "YOUTUBE_API_KEY_SUPPRIMEE"  # ta clé API
+API_KEY = os.environ.get("YOUTUBE_API_KEY")
+if not API_KEY:
+    raise ValueError("La variable d'environnement YOUTUBE_API_KEY n'est pas définie.")
 PLAYLIST_ID = "PLpkdMUKG2c0Lg-YtG1Qms4WBFD96THbZV"
 MAX_RESULTS = 50  # limite max de l'API par appel
 
