@@ -31,7 +31,6 @@ public class HomeController : Controller
     
     private const string GlobalCode = "1605";
 
-
     [HttpGet]
     public IActionResult Index()
     {
