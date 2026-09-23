@@ -593,8 +593,8 @@ dialog::backdrop { background: rgba(0, 0, 0, .92); }
 }
 
 @media (max-width: 460px) {
-  .row-thumb { display: none; }
-  .row { grid-template-columns: 36px 1fr; }
+  .row { grid-template-columns: 28px 1fr 52px; gap: 8px; }
+  .row-thumb { width: 52px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
