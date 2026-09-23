@@ -1,6 +1,6 @@
-# 🎬 Portfolio Vidéo - raaaphhhFilm (C#)
+# Portfolio Vidéo - raaaphhhFilm
 
-Une application web moderne développée en **C# /.NET Core** pour centraliser et présenter mes créations vidéo artistiques diffusées sur Youtube.
+Une application web développée en **C# /.NET Core** pour centraliser et présenter mes vidéos.
 
 ## Aperçu du Projet
 Ce projet sert de vitrine pour mes travaux de montage, et
@@ -15,6 +15,6 @@ Il existe une partie pour les utilisateurs privés qui leurs permets de taper un
 
 ## Stack Technique
 * **Backend :** ASP.NET Core 8.0 (C#)
-* **Frontend :** Razor Pages / Bootstrap 5
-* **Données** Crawler python recupérant mes vidéos directement sur ma chaine YTB.
+* **Frontend :** Vues Razor (MVC) + CSS/JS maison
+* **Données :** Liste des vidéos YouTube définie dans `HomeController`.
 Fait avec ❤️ par un passioné de programation.  

@@ -17,6 +17,7 @@ public class HomeController : Controller
     
     private readonly Dictionary<string, (string Url, bool IsPrivate, string CodeSecret)> videos = new()
     {
+        {"024", ("https://www.youtube.com/embed/M0DFk3OO0_Q?si=ixPycMoI-qqgrg65", false, "")},  
         {"SBB VOL 1", ("https://www.youtube.com/embed/vNUZywj2T54?si=qRbN9l7KfkMSoSze", false, "")},
         {"FAM", ("https://www.youtube.com/embed/B_Ck2-ad0D0?si=BF25tKSnNqobC63z", false, "")},
         {"DAMS16", ("https://www.youtube.com/embed/GkXt5Lvq2jc?si=Jy4twxwnFD9Pu8XE", false, "")},

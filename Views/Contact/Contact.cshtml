@@ -1,23 +1,32 @@
+@model ContactFormModel
+@{
+    ViewData["Title"] = "Contact";
+    var sent = ViewBag.Success as bool?;
+}
 
-<section class="contact-section py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Contact</h2>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Votre nom">
+<section class="contact">
+    <p class="section-title">Contact</p>
+    <form asp-controller="Contact" asp-action="Contact" method="post" class="form" novalidate>
+        <div class="field-row">
+            <div class="field">
+                <label asp-for="Name">Nom</label>
+                <input asp-for="Name" placeholder="Ton nom" autocomplete="name">
+                <span asp-validation-for="Name" class="field-error"></span>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Adresse e-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="votre@email.com">
+            <div class="field">
+                <label asp-for="Email">E-mail</label>
+                <input asp-for="Email" placeholder="toi@exemple.fr" autocomplete="email">
+                <span asp-validation-for="Email" class="field-error"></span>
             </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Écris ton message ici..."></textarea>
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary px-4">Envoyer</button>
-            </div>
-        </form>
-    </div>
+        </div>
+        <div class="field">
+            <label asp-for="Message">Message</label>
+            <textarea asp-for="Message" rows="6" placeholder="Raconte-moi ton projet…"></textarea>
+            <span asp-validation-for="Message" class="field-error"></span>
+        </div>
+        <div class="form-foot">
+            <p class="status-msg @(sent == true ? "ok" : sent == false ? "err" : "")" role="status">@ViewBag.Message</p>
+            <button class="btn" type="submit">Envoyer</button>
+        </div>
+    </form>
 </section>
